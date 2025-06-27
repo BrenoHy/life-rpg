@@ -11,6 +11,7 @@ class PersonagemNovo:
             "energia": 1
         }
         self.habilidades = {} 
+        self.historico = []
 
     def ganhar_xp(self, quantidade):
         self.xp += quantidade
@@ -25,8 +26,20 @@ class PersonagemNovo:
 
     def adicionar_habilidade(self, habilidade, xp_ganho):
         if habilidade not in self.habilidades:
-            self.habilidades[habilidade] = 0
-            self.habilidades[habilidade] += xp_ganho
+            self.habilidades[habilidade] = {
+                'xp': 0,
+                'nivel': 1,
+                'xp_necessario': 100
+            }
+
+        dados = self.habilidades[habilidade]
+        dados['xp'] += xp_ganho
+
+        while dados['xp'] >= dados['xp_necessario']:
+            dados['xp'] -= dados['xp_necessario']
+            dados['nivel'] += 1
+            dados['xp_necessario'] = int(dados['xp_necessario'] * 1.5)
+            print(f"{self.nome} subiu para o nível {dados['nivel']} em {habilidade}!")
 
     def __str__(self):
         return (f"Personagem(nome={self.nome}, nivel={self.nivel}, xp={self.xp}, "

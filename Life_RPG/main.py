@@ -11,7 +11,7 @@ from app.controllers.game_controller import concluir_tarefa
 personagem = criar_personagem("Keria")
 
 # Criando tarefas
-tarefa1 = criar_tarefa("Estudar programação", "média", habilidade="Programação")
+tarefa1 = criar_tarefa("Estudar programação", "média", habilidade="Programação", categoria="Estudo")
 tarefa2 = criar_tarefa("Estudar inglês", "fácil", habilidade="Inglês")
 
 # Estado inicial
@@ -26,5 +26,10 @@ personagem, tarefa1 = concluir_tarefa(personagem, tarefa1)
 print("\n--- Após concluir tarefa ---")
 print(personagem)
 print(tarefa1)
+
+# Exibindo histórico de tarefas concluídas
+print("\n--- Histórico de Tarefas Concluídas ---")
+for i, registro in enumerate(personagem.historico, 1):
+    print(f"{i}. [{registro['data_conclusao']}] {registro['nome']} ({registro['categoria']}) - XP: {registro['xp_ganho']}, Moedas: {registro['moedas_ganhas']}, Habilidade: {registro['habilidade']}")
 
 

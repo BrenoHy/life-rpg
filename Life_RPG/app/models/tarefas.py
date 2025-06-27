@@ -1,5 +1,5 @@
 class Tarefa:
-    def __init__(self, nome, dificuldade, habilidade=None):
+    def __init__(self, nome, dificuldade, habilidade=None, categoria=None):
         # Tabelas de referência
         dificuldade_xp = {
             "fácil": 50,
@@ -20,6 +20,7 @@ class Tarefa:
         self.moedas = dificuldade_moedas.get(self.dificuldade, 0)
         self.habilidade = habilidade
         self.concluida = False
+        self.categoria = categoria
 
     def concluir(self):
         """
@@ -36,7 +37,7 @@ class Tarefa:
         Mostra a tarefa de forma amigável ao usar print().
         """
         return (
-            f"Tarefa(nome='{self.nome}', dificuldade='{self.dificuldade}', "
-            f"xp={self.xp}, moedas={self.moedas}, habilidade={self.habilidade}, "
+            f"Tarefa(nome='{self.nome}', dificuldade='{self.dificuldade}', xp={self.xp}, "
+            f"moedas={self.moedas}, habilidade={self.habilidade}, categoria={self.categoria}, "
             f"concluida={self.concluida})"
         )
