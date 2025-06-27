@@ -8,10 +8,13 @@ Desenvolvido com Python e Programação Orientada a Objetos (POO), o sistema é 
 
 ## Funcionalidades
 
-- Criação e evolução de personagem com atributos e níveis  
-- Sistema de tarefas com XP, moedas e habilidades  
-- Lógica de progressão baseada em experiência e conquistas  
-- Organização do código em camadas: `models`, `services`, `controllers`
+- ✅ Criação e evolução de personagem com atributos e níveis  
+- ✅ Sistema de tarefas com XP, moedas e habilidades  
+- ✅ Lógica de progressão baseada em experiência e conquistas  
+- ✅ Habilidades com níveis próprios (independentes do nível geral)  
+- ✅ Registro de histórico de tarefas concluídas  
+- ✅ Categorias para organização das tarefas  
+- Organização do código em camadas: `models`, `services`, `controllers`  
 
 ---
 
@@ -20,7 +23,7 @@ Desenvolvido com Python e Programação Orientada a Objetos (POO), o sistema é 
 - Python 3  
 - Programação Orientada a Objetos  
 - Separação de responsabilidades (MVC adaptado)  
-- Estruturação modular para escalabilidade futura
+- Estruturação modular para escalabilidade futura  
 
 ---
 
@@ -58,13 +61,10 @@ python main.py
 
 ## Em desenvolvimento
 
-- Categorias de tarefas  
-- Habilidades com níveis  
-- Histórico de tarefas concluídas  
-- API REST com Flask  
-- Interface web com HTML, CSS e JavaScript  
-- Integração com banco de dados (SQLite)  
-- Suporte a múltiplos usuários
+- [ ] API REST com Flask  
+- [ ] Interface web com HTML, CSS e JavaScript  
+- [ ] Integração com banco de dados (SQLite)  
+- [ ] Suporte a múltiplos usuários  
 
 ---
 
@@ -72,3 +72,4 @@ python main.py
 
 Desenvolvido por **Breno Hy**  
 GitHub: [@BrenoHy](https://github.com/BrenoHy)
+
